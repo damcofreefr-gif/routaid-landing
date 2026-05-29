@@ -783,6 +783,48 @@
     footer { flex-direction: column; text-align: center; }
     .footer-links { justify-content: center; }
   }
+
+.vehicules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.vehicule-card {
+  background: #FFFFFF;
+  border: 1px solid #C8BEB0;
+  border-radius: 12px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.vehicule-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+.vehicule-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #463F39;
+}
+.vehicule-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.badge-orange { background: #FDE8D8; color: #F05A1A; }
+.badge-vert   { background: #D6EDD8; color: #4F9460; }
+.badge-bleu   { background: #D6EEFA; color: #4FA9DD; }
+.badge-jaune  { background: #FBF1CC; color: #D9AF3F; }
+
+@media (max-width: 600px) {
+  .vehicules-grid { grid-template-columns: repeat(2, 1fr); }
+}
 </style>
 </head>
 <body>
@@ -873,27 +915,32 @@
   <div class="vehicles-inner">
     <div class="section-label">Communauté</div>
     <h2 class="section-title">POUR TOUS CEUX QUI OSENT SORTIR DE CHEZ EUX</h2>
-    <div class="vehicles-grid">
-      <div class="vehicle-card" style="--vc:#F05A1A; --vc-bg:rgba(240,90,26,0.08)">
-        <span class="vehicle-emoji">🏍️</span>
-        <div class="vehicle-name">Motards</div>
-        <span class="vehicle-tag">Orange</span>
+    <div class="vehicules-grid">
+
+      <div class="vehicule-card">
+        <img src="assets/motook.png" alt="Motards" class="vehicule-img" />
+        <div class="vehicule-label">Motards</div>
+        <span class="vehicule-badge badge-orange">Orange</span>
       </div>
-      <div class="vehicle-card" style="--vc:#4F9460; --vc-bg:rgba(79,148,96,0.08)">
-        <span class="vehicle-emoji">🚐</span>
-        <div class="vehicle-name">Vanlifers</div>
-        <span class="vehicle-tag">Vert</span>
+
+      <div class="vehicule-card">
+        <img src="assets/motovanok.png" alt="Vanlifers" class="vehicule-img" />
+        <div class="vehicule-label">Vanlifers</div>
+        <span class="vehicule-badge badge-vert">Vert</span>
       </div>
-      <div class="vehicle-card" style="--vc:#4FA9DD; --vc-bg:rgba(79,169,221,0.08)">
-        <span class="vehicle-emoji">🚗</span>
-        <div class="vehicle-name">Collection</div>
-        <span class="vehicle-tag">Bleu</span>
+
+      <div class="vehicule-card">
+        <img src="assets/collecok.png" alt="Collection" class="vehicule-img" />
+        <div class="vehicule-label">Collection</div>
+        <span class="vehicule-badge badge-bleu">Bleu</span>
       </div>
-      <div class="vehicle-card" style="--vc:#D9AF3F; --vc-bg:rgba(217,175,63,0.08)">
-        <span class="vehicle-emoji">🚴</span>
-        <div class="vehicle-name">Cyclistes</div>
-        <span class="vehicle-tag">Jaune</span>
+
+      <div class="vehicule-card">
+        <img src="assets/velomodifok.png" alt="Cyclistes" class="vehicule-img" />
+        <div class="vehicule-label">Cyclistes</div>
+        <span class="vehicule-badge badge-jaune">Jaune</span>
       </div>
+
     </div>
   </div>
 </section>
