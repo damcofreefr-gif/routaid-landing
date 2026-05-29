@@ -62,11 +62,27 @@
 
   nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     padding: 1.5rem 2.5rem;
     position: relative;
     z-index: 10;
+  }
+
+  .nav-row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-row2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 0.5rem;
+    list-style: none;
   }
 
   .nav-logo {
@@ -898,15 +914,17 @@
   <div class="hero-road"></div>
 
   <nav>
-    <a href="#" class="nav-logo">
-      <img src="/logook.png" style="height:42px">
-      <img src="/banniereok.png" style="height:32px">
-    </a>
-    <ul class="nav-links">
+    <div class="nav-row1">
+      <a href="#" class="nav-logo">
+        <img src="/logook.png" style="height:42px">
+        <img src="/banniereok.png" style="height:32px">
+      </a>
+      <a href="https://routaid.app" class="btn-nav">Ouvrir l'app →</a>
+    </div>
+    <ul class="nav-row2">
       <li><a href="#fonctionnalites">Fonctionnalités</a></li>
       <li><a href="#comment">Comment ça marche</a></li>
       <li><a href="#pros">Pour les pros</a></li>
-      <li><a href="https://routaid.app" class="btn-nav">Ouvrir l'app →</a></li>
     </ul>
   </nav>
 
